@@ -1,4 +1,4 @@
-package $github.smtp2006.maven.archetype;
+package ${package}.web;
 
 
 import org.slf4j.Logger;
@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-@RequestMapping
+@RequestMapping( value = "/mvc" )
 public class HelloController
 {
-    protected static Logger L = LoggerFactory.getLogger( BaseController.class );
+    protected static Logger L = LoggerFactory.getLogger( HelloController.class );
 
     @ResponseBody
     @RequestMapping( value = "/hello" )
     public String hello( @RequestParam( value = "name", defaultValue = "World" )
-  )
+    String name )
         throws Exception
     {
-        LOG.info( "name:{}",name );
+        L.info( "name:{}", name );
         return "Hello, " + name;
     }
 }

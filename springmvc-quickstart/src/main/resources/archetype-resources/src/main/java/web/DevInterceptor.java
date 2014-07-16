@@ -1,5 +1,4 @@
-package $github.smtp2006.maven.archetype;
-
+package ${package}.web;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -10,7 +9,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class DevInterceptor
     extends HandlerInterceptorAdapter
 {
-    protected static java.util.logging.Logger L = LoggerFactory.getLogger( DevInterceptor.class );
+    protected static Logger L = LoggerFactory.getLogger( DevInterceptor.class );
 
     private boolean dev = true;
 
@@ -37,7 +36,7 @@ public class DevInterceptor
     {
         if ( dev )
         {
-            L.info( "##preHandle:{}", request.getRequestURI() );
+            L.info( "preHandle:{}", request.getRequestURI() );
         }
         return super.preHandle( request, response, handler );
     }
