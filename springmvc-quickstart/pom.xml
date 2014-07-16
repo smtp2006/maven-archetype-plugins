@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>github.smtp2006.maven.archetype</groupId>
   <artifactId>springmvc-quickstart</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <name>Archetype - springmvc-quickstart</name>
   <url>http://maven.apache.org</url>
 </project>
