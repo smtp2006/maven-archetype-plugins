@@ -1,4 +1,4 @@
-package ${package}.web;
+package ${package}.web.servlet;
 
 import java.io.IOException;
 

@@ -1,4 +1,4 @@
-package ${package}.web;
+package ${package}.web.springmvc;
 
 
 import org.slf4j.Logger;
