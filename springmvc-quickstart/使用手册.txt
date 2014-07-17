@@ -1,5 +1,6 @@
 1, 执行quickstart.bat脚本
 	1）install插件jar到本地maven仓库
+	mvn install:install-file -DgroupId=quickstart -DartifactId=web -Dversion=1.0.0 -Dpackaging=jar -Dfile=target/springmvc-quickstart-1.0.0.jar -DgeneratePom=true
 	mvn install:install-file // 通过install的方式引入二方库到本地仓库
 		-DgroupId=quickstart 
 		-DartifactId=web 
@@ -10,7 +11,7 @@
 
 
 	2）通过插件archetype方式，构建一个SpringMVC的web项目
-	
+	mvn archetype:create -DarchetypeGroupId=quickstart -DarchetypeArtifactId=web -DgroupId=com.yunos -DartifactId=quickstart
 	mvn archetype:create 	// archetype插件命令
 		-DarchetypeGroupId=quickstart // 同前面install的groupId
 		-DarchetypeArtifactId=web 	  // 同前面install的artifactId
